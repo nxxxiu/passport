@@ -9,11 +9,10 @@ class RegController extends Controller
 {
     public function reg(Request $request)
     {
-        $name=$request->input('name');
-        $pass=$request->input('pass');
-        $email=$request->input('email');
+        $str=file_get_contents('php://input');
+        $data=json_decode($str,true);
         //验证邮箱是否唯一
-        $emailonly = DB::table('users')->where(['email' => $email])->first();
+        $emailonly = DB::table('users')->where(['email' => $data['email']])->first();
 //        dd($emailonly);
         if ($emailonly) {
             $response = [
@@ -23,10 +22,10 @@ class RegController extends Controller
             return json_encode($response, JSON_UNESCAPED_UNICODE);
         }
         //密码加密
-        $pass=password_hash($pass,PASSWORD_BCRYPT);
+        $pass=password_hash($data['pass'],PASSWORD_BCRYPT);
         $data1=[
-            'name'=>$name,
-            'email'=>$email,
+            'name'=>$data['name'],
+            'email'=>$data['email'],
             'pass'=>$pass,
             'add_time'=>time()
         ];

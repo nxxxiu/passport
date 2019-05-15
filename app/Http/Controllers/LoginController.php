@@ -10,12 +10,12 @@ use Illuminate\Support\Str;
 class LoginController extends Controller
 {
     public function login(Request $request){
-        $pass=$request->input('pass');
-        $email=$request->input('email');
-        $userInfo=DB::table('users')->where(['email'=>$email])->first();
+        $str=file_get_contents('php://input');
+        $data=json_decode($str,true);
+        $userInfo=DB::table('users')->where(['email'=>$data['email']])->first();
 //        dd($userInfo);
         if ($userInfo){
-            if (password_verify($pass,$userInfo->pass)){
+            if (password_verify($data['pass'],$userInfo->pass)){
                 //生成token
                 $token=$this->loginToken($userInfo->id);
 //                dd($token);

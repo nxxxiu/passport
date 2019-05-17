@@ -11,6 +11,7 @@ class RegController extends Controller
     {
         $str=file_get_contents('php://input');
         $data=json_decode($str,true);
+//        dd($data);
         //验证邮箱是否唯一
         $emailonly = DB::table('users')->where(['email' => $data['email']])->first();
 //        dd($emailonly);

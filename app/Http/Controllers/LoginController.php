@@ -20,9 +20,6 @@ class LoginController extends Controller
                 $token=$this->loginToken($userInfo->id);
 //                dd($token);
                 $redis_token_key='login_token:id:'.$userInfo->id;
-//                dd($userInfo->id);
-
-
                 Redis::set($redis_token_key,$token);
                 Redis::expire($redis_token_key,604800);
                 $response=[

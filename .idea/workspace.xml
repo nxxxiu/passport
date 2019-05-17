@@ -51,8 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LoginController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+            <state relative-caret-position="362">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -255,12 +255,12 @@
       <workItem from="1557966366645" duration="3350000" />
       <workItem from="1557986752437" duration="1210000" />
       <workItem from="1557996365188" duration="678000" />
-      <workItem from="1558055679772" duration="686000" />
+      <workItem from="1558055679772" duration="895000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14500000" />
+    <option name="totallyTimeSpent" value="14709000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -357,8 +357,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LoginController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+        <state relative-caret-position="362">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
